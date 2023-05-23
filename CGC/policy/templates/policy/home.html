@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Claim </title>
+  </head>
+
+  <style media="screen">
+  .required {
+color: red;
+}
+body{
+  background-color: lightblue;
+}
+fieldset {
+	width: 400px;
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
+.legend {
+	font-weight: bold;
+}
+label {
+	margin-right: 10px;
+}
+  </style>
+
+  <body >
+    <div class = "text-center" style="margin-top: 150px;" >
+
+        <h1 class = "alert alert-dark" style="color:#261fad; background-color:#e3a1a7;"><b>Cognitive system for Insurance company</b></h1><br>
+        <h5 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> Input the details about your claim </h5>
+
+        <form action="{% url 'claim' %}" method="post">
+          {% csrf_token%}
+            <br><h6>
+
+
+
+        <h5>
+        <label for="hospi_id"> Enter Hospital ID:<span class="required">*</span></label>
+        <select name="hospi_id">
+            <option value="1001" selected= "selected"> 1001</option>
+            <option value="1002"> 1002</option>
+            <option value="1003"> 1003</option>
+            <option value="1004"> 1004</option>
+            <option value="1005"> 1005</option>
+            <option value="1006"> 1006</option>
+            <option value="1007"> 1007</option>
+            <option value="1008"> 1008</option>
+            <option value="1009"> 1009</option>
+            <option value="1010"> 1010</option>
+            <option value="1011"> 1011</option>
+            <option value="1012"> 1012</option>
+            <option value="1013"> 1013</option>
+        </select>
+        <br><br>
+
+        <label for="age"> Enter Your age:<span class="required">*</span></label>
+        <input type="number" name="age" required min="1" max="90"><br><br>
+
+        <label for="gender"> Select Your Gender:<span class="required">*</span></label>
+        <select name="gender">
+            <option value="Male" selected= "selected"> Male</option>
+            <option value="Female"> Female</option>
+        </select><br><br>
+
+        <label for="disease"> Select the Disease you had:<span class="required">*</span></label>
+
+        <select name="disease">
+            <option value="Heart Attack"> Heart Attack</option>
+            <option value="Covid-19"> Covid-19</option>
+            <option value="Cancer" selected= "selected"> Cancer</option>
+            <option value="Injury"> Injury</option>
+            <option value="HIV"> HIV</option>
+            <option value="Flu"> Flu</option>
+        </select>
+        <br><br>
+
+        <label for="min_hospitalized_days">Select Minimum Hospitalized Days:<span class="required">*</span></label>
+        <select name="min_hospitalized_days">
+            <option value="0"> 0</option>
+            <option value="1" selected= "selected"> 1</option>
+        </select>
+        <br><br>
+
+        <label for="treatment_cost"> Enter Treatment Cost:<span class="required">*</span></label>
+        <input type="number" name="treatment_cost" required max="1000000"><br><br>
+
+        <label for="insurance_limit"> Enter Insurance Limit:<span class="required">*</span></label>
+        <input type="number" name="insurance_limit" required max="500000"><br><br>
+
+        <br><br>
+        </h5>
+
+            <input type="submit" value="Submit" class = "btn btn-info">
+
+        </form>
+
+        <br>
+
+
+        </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
