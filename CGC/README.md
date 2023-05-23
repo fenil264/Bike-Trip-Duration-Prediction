@@ -1,3 +1,2 @@
-# image-recognition-machineLearning
-These project is useful to determine user hand written text so i have used keras, Tensorflow
-, and Flask to build this application.
+# Bank Loan Defaulter Classification Project Machine Learning
+These project is useful to determine user is eligible to take loan and it rates the chances of user repaying that loan.
